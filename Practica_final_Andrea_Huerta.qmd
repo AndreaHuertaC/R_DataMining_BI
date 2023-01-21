@@ -38,7 +38,6 @@ Convierte en factor la columna tipo, respetando las etiquetas:
 
 ```{r}
 df_seeds$tipo <- factor(df_seeds$tipo, labels = c('Kama','Rosa', 'Canadian'))
-summary(df_seeds)
 ```
 
 #### PREGUNTA 3
@@ -145,4 +144,4 @@ cl<-df_seeds |> select(area,perimetro,compacto,longitud,anchura,coeficient.asime
 table(real=df_seeds$tipo,cluster=cl$cluster)
 ```
 
-**Respuesta**: ''Esas líneas están extrayendo una tabla que compara el tipo real de semillas con los tres grupos o cluster realizados con la función kmeans."
+**Respuesta**: ''Esas líneas seleccionan los campos para hacer una clusterización por kmeans. El resultado es una tabla que compara el tipo real de dataframe con los tres clusters."
